@@ -1,0 +1,16 @@
+
+#logo_twitter img, .post-top h4{
+	_behavior:expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+	this.src = png_blank):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+	this.runtimeStyle.backgroundImage = "none")),this.pngSet=true)
+	);
+}
+#commentform label{
+	position:relative;
+	top:-5px;
+}
+h2.page_title, .post-top, h2#comments, h3#respond_title, .page_archives_div h2{
+	background:url(images/bgr_post_title_ie.png) no-repeat left bottom;
+}
